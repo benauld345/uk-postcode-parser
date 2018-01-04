@@ -1,5 +1,7 @@
 # UK Postcode Parser
 
+UK Postcode Parser is a simple PHP utility for validating and parsing a UK postcodes.
+
 ## Installation
 
 This package can be installed using composer:
