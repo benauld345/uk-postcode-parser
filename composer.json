@@ -1,0 +1,28 @@
+{
+    "name": "benauld345/uk-postcode-parser",
+    "description": "PHP utility for parsing and validating United Kingdom Postcodes",
+    "keywords": ["postcode", "validation", "composer", "package"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ben Auld",
+            "email": "ben@benauld.com"
+        }
+    ],
+    "type": "library",
+    "support": {
+        "source": "https://github.com/benauld345/uk-postcode-parser",
+        "issues": "https://github.com/benauld345/uk-postcode-parser/issues"
+    },
+    "require": {
+        "php": ">=7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Benauld345\\UkPostcodeParser\\": "src/"
+        }
+    }
+}
