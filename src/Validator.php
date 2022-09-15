@@ -18,8 +18,6 @@ class Validator
      * Postcode validation expression
      *
      * @var string
-     * @access private
-     * @static
      */
     private static $validPostcode = "/^([Gg][Ii][Rr]0[Aa]{2})|((([A-Za-z][0-9]{1,2})|(([A-Za-z][A-Ha-hJ-Yj-y][0-9]{1,2})|(([A-Za-z][0-9][A-Za-z])|([A-Za-z][A-Ha-hJ-Yj-y][0-9]?[A-Za-z]))))[0-9][A-Za-z]{2})$/";
 
@@ -28,8 +26,6 @@ class Validator
      *
      * @param string $postcode The postcode to check
      * @return bool True if valid, false if invalid
-     * @access public
-     * @static
      */
     public static function check($postcode)
     {

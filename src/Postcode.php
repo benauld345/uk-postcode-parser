@@ -17,7 +17,6 @@ class Postcode
      * Inputted postcode
      *
      * @var string
-     * @access private
      */
     private $postcode;
 
@@ -25,7 +24,6 @@ class Postcode
      * Constructor
      *
      * @param string $postcode The postcode to parse
-     * @access public
      * @throws \Exception If the postcode is invalid
      */
     public function __construct($postcode)
@@ -41,7 +39,6 @@ class Postcode
      * Returns the Outward Code
      *
      * @return string
-     * @access public
      */
     public function getOutwardCode()
     {
@@ -52,7 +49,6 @@ class Postcode
      * Returns the Inward Code
      *
      * @return string
-     * @access public
      */
     public function getInwardCode()
     {
@@ -63,7 +59,6 @@ class Postcode
      * Returns the Postcode Area
      *
      * @return string
-     * @access public
      */
     public function getArea()
     {
@@ -78,7 +73,6 @@ class Postcode
      * Returns the Postcode District
      *
      * @return string
-     * @access public
      */
     public function getDistrict()
     {
@@ -95,7 +89,6 @@ class Postcode
      * Returns the Postcode Sector
      *
      * @return int
-     * @access public
      */
     public function getSector()
     {
@@ -106,7 +99,6 @@ class Postcode
      * Returns the Postcode Unit
      *
      * @return string
-     * @access public
      */
     public function getUnit()
     {
@@ -117,7 +109,6 @@ class Postcode
      * Returns a formatted Postcode
      *
      * @return string
-     * @access public
      */
     public function getFormattedPostcode()
     {
