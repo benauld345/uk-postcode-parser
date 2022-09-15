@@ -112,4 +112,21 @@ final class PostcodeTest extends TestCase
 
         unset($postcode);
     }
+
+    public function testIsUkMainland()
+    {
+        $postcode = new Benauld345\UkPostcodeParser\Postcode('ec1a1bb');
+        $this->assertTrue($postcode->isUkMainland());
+
+        $postcode = new Benauld345\UkPostcodeParser\Postcode('dn551pt');
+        $this->assertTrue($postcode->isUkMainland());
+
+        $postcode = new Benauld345\UkPostcodeParser\Postcode('KW15 1SE');
+        $this->assertFalse($postcode->isUkMainland());
+
+        $postcode = new Benauld345\UkPostcodeParser\Postcode('EX1 1HS');
+        $this->assertTrue($postcode->isUkMainland());
+
+        unset($postcode);
+    }
 }
