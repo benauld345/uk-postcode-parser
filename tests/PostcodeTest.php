@@ -129,4 +129,24 @@ final class PostcodeTest extends TestCase
 
         unset($postcode);
     }
+
+    public function isNorthernIreland()
+    {
+        $postcode = new Benauld345\UkPostcodeParser\Postcode('ec1a1bb');
+        $this->assertFalse($postcode->isUkMainland());
+
+        $postcode = new Benauld345\UkPostcodeParser\Postcode('dn551pt');
+        $this->assertFalse($postcode->isUkMainland());
+
+        $postcode = new Benauld345\UkPostcodeParser\Postcode('BT3 9EP');
+        $this->assertTrue($postcode->isUkMainland());
+
+        $postcode = new Benauld345\UkPostcodeParser\Postcode('BT52 2NL');
+        $this->assertTrue($postcode->isUkMainland());
+
+        $postcode = new Benauld345\UkPostcodeParser\Postcode('EX1 1HS');
+        $this->assertFalse($postcode->isUkMainland());
+
+        unset($postcode);
+    }
 }

@@ -65,6 +65,25 @@ class Postcode
     ];
 
     /**
+     * Northern Ireland prefixes
+     *
+     * @var array
+     */
+    public $northernIrelandPrefixes = [
+        'BT1', 'BT10', 'BT11', 'BT12', 'BT13', 'BT14', 'BT15', 'BT17', 'BT18',
+        'BT19', 'BT2', 'BT20', 'BT21', 'BT22', 'BT23', 'BT24', 'BT25', 'BT26',
+        'BT27', 'BT28', 'BT29', 'BT3', 'BT30', 'BT31', 'BT32', 'BT33', 'BT34',
+        'BT35', 'BT36', 'BT37', 'BT38', 'BT39', 'BT4', 'BT40', 'BT41', 'BT42',
+        'BT43', 'BT44', 'BT45', 'BT46', 'BT47', 'BT48', 'BT49', 'BT5', 'BT50',
+        'BT51', 'BT52', 'BT53', 'BT54', 'BT55', 'BT56', 'BT57', 'BT59', 'BT6',
+        'BT60', 'BT61', 'BT62', 'BT63', 'BT64', 'BT65', 'BT66', 'BT67', 'BT68',
+        'BT69', 'BT7', 'BT70', 'BT71', 'BT72', 'BT73', 'BT74', 'BT75', 'BT76',
+        'BT77', 'BT78', 'BT79', 'BT8', 'BT80', 'BT81', 'BT82', 'BT83', 'BT9',
+        'BT92', 'BT93', 'BT94', 'IM1', 'IM2', 'IM3', 'IM4', 'IM5', 'IM6',
+        'IM7', 'IM8', 'IM9', 'TR21', 'TR22', 'TR23', 'TR24', 'TR25'
+    ];
+
+    /**
      * Inputted postcode
      *
      * @var string
@@ -182,6 +201,24 @@ class Postcode
         }
 
         if (in_array($this->getArea(), $this->ukMainlandPrefixes)) {
+            return true;
+        }
+
+        return false;
+    }
+
+    /**
+     * Checks if the given postcode is in Northern Ireland
+     *
+     * @return bool
+     */
+    public function isNorthernIreland()
+    {
+        if (in_array($this->getOutwardCode(), $this->northernIrelandPrefixes)) {
+            return true;
+        }
+
+        if (in_array($this->getArea(), $this->northernIrelandPrefixes)) {
             return true;
         }
 
